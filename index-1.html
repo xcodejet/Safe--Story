@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./design.css">
+    <link rel="stylesheet" href="./userdetails.css">
+    <link rel="stylesheet" href="./settings.css">
+    <link rel="stylesheet" href="./scroll-bar.css">
+    <link rel="stylesheet" href="./searchbox.css">
+    <link rel="icon" href="./System/icon.jpg" id="icon">
+    <title id="title">SafeStory | MiniProLab</title>
+</head>
+<body>
+    <div class="xcodejet-header">
+        <div class="header-items">
+            <img draggable="false" class="xcodejet-header-img" src="./System/header-image.png">
+            <div class="header-text" style="display: none;">
+                <h2>safe story</h2><br>
+                <h3><a style="color: rgb(251, 255, 0)">From </a>MiniProLab</h3>
+            </div>
+        </div>
+        <!--<div class="header-items">
+            <img draggable="false" class="xcodejet-header-img" src="./System/miniprolab-logo.png">
+            <div class="header-text">
+                <h2>safe story</h2><br>
+                <h3><a style="color: rgb(251, 255, 0)">From </a>MiniProLab</h3>
+            </div>
+        </div>-->
+        <div class="header-back-search">
+            <a>
+                <i onclick="searchBarHide()" class="fa fa-search"></i>
+            </a>
+        </div>
+        <div class="header-back">
+            <a >
+                <img onclick="menuTabOpen()" draggable="false" id="profile-1" src="miniprolab">
+            </a>
+        </div>
+    </div>
+    <!--search box-->
+    <div class="search-box">
+        <div class="searchbar-box">
+            <div class="searchbar-out">
+                <div class="searchbar-icon">
+                    <img src="./System/search.png">
+                </div>
+                <div class="searchbar-input-out">
+                    <input type="text" placeholder="Type here username" oninput="inputProccess(this)">
+                </div>
+                <div class="searchbar-button-out">
+                    <!--<label for="search">Search</label>-->
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+            <div class="resultbar-out">
+                <!--No matches-->
+            </div>
+        </div>
+    </div>
+    <div id="gallery">
+        <!--profile box-->
+        <div class="settings-box-border">
+            <div class="settings-box">
+                <div class="settings">
+                    <img src="miniprolab"  draggable="false" class="settings-dp">
+                    <div class="settings-name">
+                        <!--name and data--><h5><img src="./System/warn.png" style="width: 20px; margin-right: 5px;">Connectiong to the server...<br>Do not close the app !</h5>
+                    </div>
+                </div>
+                <h3></h3>
+            </div>
+        </div>
+        <div class="settings-box-border">
+            <div class="settings-box">
+                <div class="settings">
+                    <div class="settings-list">
+                        <div class="setting-list-item">
+                            <img src="./System/upload-image.png" alt="">
+                            <a>Upload</a>
+                        </div>
+                        <div class="setting-list-item">
+                            <img src="./System/diary.png" alt="">
+                            <a>My Story</a>
+                        </div>
+                        <div class="setting-list-item">
+                            <img src="./System/user.png" alt="">
+                            <a>Account</a>
+                        </div>
+                        <div class="setting-list-item">
+                            <img src="./System/setting.png" alt="">
+                            <a>Settings</a>
+                        </div>
+                        <div class="setting-list-item">
+                            <img src="./System/caution.png" alt="">
+                            <a>Report</a>
+                        </div>
+                        <div class="setting-list-item">
+                            <img src="./System/sign-out.png" alt="">
+                            <a>Log Out</a>
+                        </div>
+                    </div>
+                </div>
+                <h3></h3>
+            </div>
+        </div>
+        <!--Other's profile-->
+        <div class="userdetails-box-border">
+            <div class="userdetails-box">
+                <div class="userdetails">
+                    <img src="./System/miniprolab-logo.png"  draggable="false" class="userdetails-dp">
+                    <div class="userdetails-name">
+                        <!--name and data--><h5><img src="./System/warn.png" style="width: 20px; margin-right: 5px;">Search an account first</h5>
+                    </div>
+                </div>
+                <h3></h3>
+            </div>
+        </div>
+        <div class="userdetails-box-border">
+            <div class="userdetails-box">
+                <div class="userdetails">
+                    <div class="userdetails-list">
+                        <div class="userdetails-list-item">
+                            <img src="./System/heart-lv0.png" alt="">
+                            <a class="userdetails-list-item-a">0<br> Lovers</a>
+                        </div>
+                    </div>
+                    <div class="userdetails-list">
+                        <div class="userdetails-list-item">
+                            <img src="./System/loving.png" alt="">
+                            <a class="userdetails-list-item-a">0<br>  Loving</a>
+                        </div>
+                    </div>
+                    <div class="userdetails-list">
+                        <div class="userdetails-list-item">
+                            <img src="./System/upload-image.png" alt="">
+                            <a class="userdetails-list-item-a">0<br>  Uploads</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="userdetails">
+                    <div class="userdetails-list">
+                        <div class="userdetails-list-item userdetails-list-item-button">
+                            <img src="./System/loved.png" alt="">
+                            <a>Love</a>
+                        </div>
+                    </div>
+                    <div class="userdetails-list">
+                        <div class="userdetails-list-item userdetails-list-item-button">
+                            <img src="./System/block.png" alt="">
+                            <a>Report</a>
+                        </div>
+                    </div>
+                </div>
+                <h3></h3>
+            </div>
+        </div>
+        <!--body-->
+        <div class="box-border">
+            <div class="box">
+                <img src="./Upload/1.png" alt="">
+                <div class="box-footer">
+                    <div class="box-footer-img">
+                        <img draggable="false" src="./profile-photo/anuki.jpeg">
+                    </div>
+                    <div class="box-footer-text">
+                        <h1>Night</h1>
+                        <h3>U.V.D. Anuki Inupama</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="box-border">
+            <div class="box">
+                <img src="./Upload/6.jpeg" alt="">
+                <div class="box-footer">
+                    <div class="box-footer-img">
+                        <img draggable="false" src="./profile-photo/anuki.jpeg">
+                    </div>
+                    <div class="box-footer-text">
+                        <h1>Night</h1>
+                        <h3>U.V.D. Anuki Inupama</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+    </div>
+    <div class="footer">
+            <div class="box-footer">
+                <a href="#">Copyright © 2023 - XCodeJet team</a>
+            </div>
+    </div>
+    <script src="./Kumuthu.js"></script>
+    <script src="./boxes.js"></script>
+    <script src="./append-data.js"></script>
+    <script src="./openuser.js"></script>
+</body>
+</html>
